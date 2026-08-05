@@ -7,7 +7,7 @@ export default function ThemeToggle() {
     <button onClick={toggle} style={{
       width: '44px', height: '24px',
       borderRadius: '100px', border: 'none',
-      background: dark ? '#3b82f6' : '#e2e8f0',
+      background: dark ? 'dodgerblue' : 'whitesmoke',
       cursor: 'pointer', position: 'relative',
       transition: 'background 0.3s ease',
       flexShrink: 0
