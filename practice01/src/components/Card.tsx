@@ -1,5 +1,6 @@
 import type { MouseEventHandler } from "react";
 import Button from "./Button";
+import ReviewScore from "./ReviewScore";
 
 interface Props {
     imgSrc: string;
@@ -26,6 +27,8 @@ export default function Card({
                 <h3 className="text-lg text-neutral-600 font-bold">
                     {title}
                 </h3>
+
+                <ReviewScore />
 
                 <p className="text-neutral-600 mb-3 text-justify">
                     {body}
