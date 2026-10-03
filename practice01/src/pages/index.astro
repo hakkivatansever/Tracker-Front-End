@@ -1,0 +1,52 @@
+---
+import "../global.css"
+import Card from "../components/Card.tsx";
+
+const DATA = [
+	{
+		imgSrc: "https://react.dev/images/home/videos/rethinking.jpg",
+		title: "Card 1",
+		body: "Lorem ipsum dolor sid amet... Lorem ipsum dolor sid amet... Lorem ipsum dolor sid amet...",
+		buttonText: "See More",
+		onButtonClick: () => console.log("CARD CLICKED!"),
+	},
+	{
+		imgSrc: "https://react.dev/images/home/videos/rethinking.jpg",
+		title: "Card 2",
+		body: "Lorem ipsum dolor sid amet... Lorem ipsum dolor sid amet... Lorem ipsum dolor sid amet...",
+		buttonText: "See More",
+		onButtonClick: () => console.log("CARD CLICKED!"),
+	},
+	{
+		imgSrc: "https://react.dev/images/home/videos/rethinking.jpg",
+		title: "Card 3",
+		body: "Lorem ipsum dolor sid amet... Lorem ipsum dolor sid amet... Lorem ipsum dolor sid amet...",
+		buttonText: "See More",
+		onButtonClick: () => console.log("CARD CLICKED!"),
+	},
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="flex justify-center items-center h-[100vh]">
+		<div class="flex flex-wrap gap-8 justify-center">
+			{DATA.map((item) => (
+				<Card
+					imgSrc={item.imgSrc}
+					title={item.title}
+					body={item.body}
+					buttonText={item.buttonText}
+					onButtonClick={item.onButtonClick}
+				/>
+			))}
+		</div>
+	</body>
+</html>
